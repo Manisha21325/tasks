@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge>
+        <meta name=" viewport"content="width=device-width,initial-scale=1.0">
+    <title>
+        handling
+    </title>
+    <style>
+        body {
+            --primary: #ee12bb;
+            --bg: #f0fcff;
+            --text: #121033;
+            --gradient: linear-gradient(-315deg, #f0fcff, #e7faff);
+            --shadow-black: rgba(20, 20, 92, 0.2);
+            --shadow-white: rgb(255, 255, 255);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 1rem 10%;
+            margin: 0;
+            box-sizing: border-box;
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            justify-content: center;
+            background: var(--gradient);
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 12px;
+            background: var(--gradient);
+            border-radius: 1rem;
+            padding: 30px 20px;
+            box-shadow: 5px 5px 10px -5px var(--shadow-black), -5px -5px 10px -5px var(--shadow-white), inset 5px 5px 10px -5px var(--shadow-black)inset -5px -5px 10px -5px var(--shadow-white);
+        }
+
+        .section code {
+            flex: 1;
+            background: #9dc51c;
+            padding: 1rem;
+            font-size: 1.4rem;
+            color: #e7faff;
+        }
+
+        code.tag {
+            font-weight: bold;
+            color: var(--primary);
+
+        }
+
+        code.tab {
+            padding-left: 1.5rem;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="section">
+        <h1>create LIBRARY</h1>
+        <code>
+                <span class="tag">CREATE DATABASE</span> library;
+
+            </code>
+    </div>
+    <div class="section">
+        <h1>create table in library</h1>
+        <code>
+                <span class="tag">CREATE TABLE</span> book_records
+                <span class="tag">(</span>
+                <div class="tab">
+                    book_library_no<span class="tag">: 21342,</span>
+                    <br>
+                    book_name<span class="tag">: b s grewal,</span>
+                    <br>
+                    author_name<span class="tag">: p .k.grewal,</span>
+                    <br>
+                    book_price<span class="tag"> :1200,</span>
+
+                </div>
+                <span class="tag">)</span>
+
+            </code>
+    </div>
+    <div class="section">
+        <h1>delete tables</h1>
+        <code>
+                <span class="tag">drop table</span> book_records;
+            </code>
+    </div>
+    <div class="section">
+        <h1>
+            delete library
+        </h1>
+        <code>
+                <span class="tag">drop database</span> library;
+
+            </code>
+    </div>
+
+</body>
+
+</html>
